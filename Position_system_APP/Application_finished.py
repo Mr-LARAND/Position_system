@@ -48,7 +48,7 @@ selected_port = ""             # Выбранный порт
 baud_rate = 9600               # Скорость передачи данных
 response_buffer = ""           # Буфер для ответов от Arduino
 running = True                 # Флаг работы приложения
-data_flow = None       # Поток для чтения данных
+data_flow = None               # Поток для чтения данных
 serial_lock = threading.Lock() # Блокировка для безопасного доступа к порту
 
 # Переменные для GUI
