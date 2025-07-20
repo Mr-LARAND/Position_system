@@ -1,3 +1,11 @@
+/* 
+Данный скетч ЗАЛИТ в Arduino nano
+Пользователь задаёт какой-то угол N, то мотор встает на угол N, далее есть команды "+<угол>" и "-<угол>"
+-<угол> - движение на N-<угол>
++<угол> - движение на N+<угол>
+то есть можно немного корректировать введенный угол, еще мною была добавлена ф-я нормализации угла, поэтому необязательно задавать угол в диапазоне 0-359
+*/
+
 #include <Arduino.h>
 
 const int dir_pin = 10;
@@ -21,7 +29,7 @@ void setup()
   digitalWrite(enable_pin, LOW); // Включаем драйвер
   
   Serial.begin(9600);
-  Serial.println("Введите угол (0-359) или +/- угол (например +45):");
+  Serial.println("Enter an angle (0-359) or +/- an angle (eg +45):");
 }
 
 
@@ -71,14 +79,14 @@ void loop()
       float delta = input.substring(1).toFloat();
       float new_angle = normalize_angle(Starting_angle + delta);
       move_To_Angle(new_angle);
-      Serial.print("Новый угол: ");
+      Serial.print("New angle: ");
       Serial.println(new_angle, 1);
     }
     else if(input.startsWith("-")) {
       float delta = input.substring(1).toFloat();
       float new_angle = normalize_angle(Starting_angle - delta);
       move_To_Angle(new_angle);
-      Serial.print("Новый угол: ");
+      Serial.print("New angle: ");
       Serial.println(new_angle, 1);
     }
     else 
@@ -86,7 +94,7 @@ void loop()
       float angle = input.toFloat();
       normalize_angle(angle);
       move_To_Angle(angle);
-      Serial.print("Угол установлен: ");
+      Serial.print("Angle set: ");
       Serial.println(angle, 1);
     }
   }

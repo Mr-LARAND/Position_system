@@ -1,3 +1,8 @@
+// /* 
+// Данный скетч НЕ ЗАЛИТ в Arduino nano
+// Простое по, пользователь вводит угол, мотор на него становится
+// */
+
 // #include <Arduino.h>
 
 // const int dir_pin = 10;
@@ -22,8 +27,8 @@
 //   digitalWrite(enable_pin, LOW); // Включаем драйвер
   
 //   Serial.begin(9600);
-//   Serial.println("Система позиционирования");
-//   Serial.println("Введите угол (0-359):");
+//   Serial.println("Positioning system");
+//   Serial.println("Enter angle (0-359):");
 // }
 
 
@@ -63,13 +68,13 @@
 //     if (Entered_angle >= 0 && Entered_angle < 360) 
 //     {
 //       move_To_Angle(Entered_angle);
-//       Serial.print("Установлено: ");
+//       Serial.print("Installed: ");
 //       Serial.print(Entered_angle, 1);
 //       Serial.println("°");
 //     } 
 //     else 
 //     {
-//       Serial.println("Ошибка! Введите 0-359.9");
+//       Serial.println("Error! Enter 0-359.9");
 //     }
 
 //     // Очищаем буфер от оставшихся символов (включая \r и \n)
