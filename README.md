@@ -29,5 +29,8 @@
 Position_system_Emb - код встраиваемой системы (Упрощённый C/C++ (Arduino Wiring))
 Position_system_APP - код приложения для управления встраиваемой системой (Python(imgui, glfw, serial, OpenGL))
 
+
 Пример работы проекта ищите в репозитории под названием "Пример работы.mov"
+
+!!! В случае если "Пример работы.mov" не открывается на вашем устройстве, то видео доступно по следующему адресу: https://disk.yandex.ru/client/disk/%D0%A0%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%A0%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5%2F%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%80%D0%B0%D0%BE%D0%B1%D1%82%D1%8B.mov
 
